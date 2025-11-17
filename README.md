@@ -1,84 +1,84 @@
 # 🛡️ SecureVault
 
-A secure, simple, and reliable desktop application for managing your sensitive information, built with C#.
+A local-first, encrypted file vault application for Windows, built with C# and WPF. This project aims to provide a secure environment, similar to a macOS Finder, for managing sensitive files, completely isolated from the host operating system.
 
 ---
+
+## ⚠️ Development Status
+
+**This project is currently in the early development and refactoring stage.**
+
+As noted in the project plan, the core features are being restored and re-implemented. The main UI (containing 'Login' and 'Vault' tabs) is not yet functional and requires proper wiring of the ViewModels and services. This repository represents a work-in-progress.
 
 ## 📖 About The Project
 
-SecureVault is a C# desktop application designed to provide a safe and encrypted local storage for your most sensitive data, such as passwords, credit card numbers, or secure notes. In an age of constant data breaches, managing critical information locally with strong encryption offers a robust layer of security and peace of mind.
+SecureVault is a desktop application designed to be a secure, local-only file safe. Users can log in with a master password or PIN to access a vault that functions like a familiar file explorer.
 
-This project was built as a clean, lightweight, and easy-to-use alternative to cloud-based managers, ensuring that you—and only you—have access to your data.
+The core principle is security through isolation and encryption:
+* **Local-First:** All data is stored on your local machine, not on any cloud server.
+* **Encrypted:** All files added to the vault are encrypted.
+* **Isolated:** The vault's contents are not accessible through the standard Windows File Explorer or any other application.
 
----
+## 🎯 Project Goals & Features
 
-## ✨ Features
+This application is being built to include the following features:
 
-* **Local-First Storage:** All data is stored securely on your local machine, not on a remote server.
-* **Strong Encryption:** [**TODO:** Mention the encryption algorithm used, e.g., "Utilizes AES-256 encryption..."]
-* **Master Password Protection:** A single, strong master password decrypts and unlocks your vault.
-* **Intuitive Interface:** A clean and simple UI for adding, editing, and organizing your credentials.
-* **[TODO: Add More Features]**
-    * *Example: Password Generation*
-    * *Example: Search Functionality*
-    * *Example: Auto-lock on idle*
+* **Secure Authentication:** A robust login screen requiring a password or PIN to unlock the vault.
+* **Encrypted Storage:** All files and folder structures within the vault will be encrypted (using `CryptoService.cs`).
+* **Familiar UI:** A "macOS Finder" style interface for intuitive file management.
+* **Full File Operations:** Implement all general file explorer features:
+    * Create, Delete, and Rename files and folders.
+    * Add files from the local system into the vault.
+    * Right-click context menus with options like `Copy`, `Paste`, `Cut`, `Delete`, and `Properties`.
+* **Total Isolation:** Files inside the vault cannot be accessed from outside the SecureVault application.
 
----
+## 🛠️ Tech Stack & Architecture
 
-## 🛠️ Tech Stack
+This project is built using:
 
-This project is built using the following technologies:
+* **Language:** **C#**
+* **Framework:** **.NET Framework 4.8**
+* **Platform:** **.NET Desktop Development (WPF)**
+* **IDE:** **Visual Studio**
 
-* **[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)**
-* **[.NET Framework / .NET Core](https://dotnet.microsoft.com/)**
-* **[Windows Forms (WinForms) / WPF]**** (Please specify which one)**
+### Architecture (MVVM)
 
----
+The project follows the **Model-View-ViewModel (MVVM)** design pattern to ensure a clean separation of concerns.
 
-## 🚀 Getting Started
+* **`/Views/`**: Contains all the UI (XAML) files, such as `PasswordView.xaml` and `VaultView.xaml`. These are responsible for the "look" of the application.
+* **`/ViewModels/`**: Contains the logic and state for the Views (e.g., `VaultViewModel.cs`, `PasswordViewModel.cs`). They handle user interactions and data preparation.
+* **`/Models/`**: Contains the data structures, such as `FileItem.cs`, which represents a file or folder in the vault.
+* **`/Services/`**: Holds the core business logic, decoupled from the UI.
+    * `CryptoService.cs`: For handling all encryption and decryption.
+    * `VaultService.cs`: For managing the vault's file system operations.
+    * `FileIconService.cs`: For retrieving file-appropriate icons.
+* **`/Helpers/` & `/Converters/`**: Utility classes like `RelayCommand.cs` and value converters to support the MVVM architecture.
 
-You can get a copy of SecureVault up and running in two ways:
+## 🚀 Getting Started (Building from Source)
 
-### 1. Using the Installer (Recommended)
-
-An installer is provided for easy setup on a Windows machine.
-
-1.  Go to the [**Releases**](https://github.com/PiyushJaiswall/SecureVault/releases) page.
-2.  Download the latest `SecureVaultInstaller.msi` or `.exe` file.
-3.  Run the installer and follow the on-screen instructions.
-
-*(Note: If you have not yet created a release, you can build the `SecureVaultInstaller` project to generate the setup files.)*
-
-### 2. Building from Source
-
-If you are a developer and want to build the project from its source code:
+To get a local copy up and running for development:
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/PiyushJaiswall/SecureVault.git](https://github.com/PiyushJaiswall/SecureVault.git)
+    git clone https://github.com/PiyushJaiswall/SecureVault.git
     ```
-2.  **Open the Solution:**
-    Navigate to the cloned directory and open `SecureVault.sln` with **Visual Studio**.
+2.  **Open in Visual Studio:**
+    * Navigate to the cloned directory and open `SecureVault.sln`.
+    * Ensure you have the **".NET desktop development"** workload installed in Visual Studio.
+    * Ensure your environment is set up for **.NET Framework 4.8**.
 3.  **Build the Project:**
     Press `Ctrl+Shift+B` or go to `Build > Build Solution` to restore dependencies and compile the application.
 4.  **Run:**
-    Set the `SecureVault` project as the startup project and press `F5` to run it.
+    Set `SecureVault` as the startup project and press `F5` to debug.
 
----
+## 🗺️ Roadmap & Next Steps
 
-## 📸 Usage
+Based on the current issues, the immediate priorities are:
 
-[**TODO:** Add a brief guide on how to use the application. This is a great place to add screenshots!]
-
-*Example:*
-
-1.  Launch SecureVault.
-2.  Create your new, strong master password. **(Remember this! It cannot be recovered.)**
-3.  Once inside, click the "Add New" button to save a new credential.
-4.  Fill in the details and click "Save". Your data is now encrypted and stored.
-
-
----
+* [ ] **Restore Core Features:** Re-implement the "gone" features.
+* [ ] **Fix UI Connectivity:** Properly connect the `MainWindow.xaml` (with its `Login` and `Vault` tabs) to their respective ViewModels.
+* [ ] **Implement Services:** Wire up the `CryptoService` and `VaultService` to the ViewModels.
+* [ ] **Code Refactoring:** Clean up the codebase to ensure all components are written correctly and interact as intended.
 
 ## 🤝 Contributing
 
@@ -91,8 +91,6 @@ If you have a suggestion that would make this better, please fork the repo and c
 3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
-
----
 
 ## 📧 Contact
 
