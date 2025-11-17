@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureVault", "SecureVault\SecureVault.csproj", "{1D176554-8F82-478D-B2E0-A57ABB7DB494}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SecureVaultInstaller", "SecureVaultInstaller\SecureVaultInstaller.vdproj", "{A58C20DD-E218-A574-C946-87F0116D1EAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D176554-8F82-478D-B2E0-A57ABB7DB494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D176554-8F82-478D-B2E0-A57ABB7DB494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D176554-8F82-478D-B2E0-A57ABB7DB494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D176554-8F82-478D-B2E0-A57ABB7DB494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A58C20DD-E218-A574-C946-87F0116D1EAE}.Debug|Any CPU.ActiveCfg = Debug
+		{A58C20DD-E218-A574-C946-87F0116D1EAE}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE5CB4D7-9620-432F-A168-FE752CB89CAA}
+	EndGlobalSection
+EndGlobal

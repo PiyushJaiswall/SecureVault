@@ -1,0 +1,159 @@
+User-specific files
+
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+User-specific files (MonoDevelop/Xamarin Studio)
+
+*.userprefs
+
+Mono auto-generated files
+
+mono_crash.*
+
+Build results
+
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+Visual Studio 2015/2017 cache/options directory
+
+.vs/
+
+Visual Studio 2017/2019/2022 cache/options directory
+
+.vsconfig
+
+Visual Studio 2022
+
+Microsoft.VisualStudio.ProjectSystem.Query.VS.cache
+
+Visual Studio Code cache directory
+
+.vscode/
+
+vstest solution options
+
+.testsettings
+
+ReSharper is a control freak!
+
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+Coverlet
+
+coverage..json
+coverage..xml
+
+NCrunch
+
+NCrunch*
+.crunch.local.xml
+
+Visual Studio code coverage results
+
+*.coverage
+*.coveragexml
+
+NCover
+
+*.ncover
+
+Visual Studio profiler
+
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+Visual Studio trace files
+
+*.trace.vsp
+*.trace.vspx
+
+Tombstones
+
+*.tombstone
+
+Component Designer cache
+
+*.dbmdl
+*.dbm
+
+MSTest test solution
+
+*.mstest
+*.testrunconfig
+
+CodeRush
+
+*.cr
+
+Auto-generated fields
+
+Properties/
+
+Service Fabric
+
+*.sfproj
+
+Paket files
+
+.paket/paket.exe
+paket-files/
+
+FAKE - F# Make
+
+.fake/
+
+OctoPack
+
+*.octopack
+
+Test files
+
+*.testadapter.log
+
+VS Tdo file
+
+*.tdo
+
+Visual Studio related
+
+*.cache
+*.ide
+*.slnx
+*.sln.obj
+
+Build-related files
+
+*.pdb
+*.dll
+*.exe
+*.obj
+*.lib
+*.idb
+*.exp
+*.ilk
+*.pch
+
+NuGet packages directory
+
+packages/
+*.nupkg
