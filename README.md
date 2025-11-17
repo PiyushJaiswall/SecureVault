@@ -4,12 +4,6 @@ A local-first, encrypted file vault application for Windows, built with C# and W
 
 ---
 
-## ⚠️ Development Status
-
-**This project is currently in the early development and refactoring stage.**
-
-As noted in the project plan, the core features are being restored and re-implemented. The main UI (containing 'Login' and 'Vault' tabs) is not yet functional and requires proper wiring of the ViewModels and services. This repository represents a work-in-progress.
-
 ## 📖 About The Project
 
 SecureVault is a desktop application designed to be a secure, local-only file safe. Users can log in with a master password or PIN to access a vault that functions like a familiar file explorer.
